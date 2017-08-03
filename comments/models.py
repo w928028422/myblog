@@ -1,14 +1,10 @@
 from django.db import models
+from users.models import User
 
 # Create your models here.
 class Comment(models.Model):
 
-    #昵称
-    name = models.CharField(max_length=100)
-    #邮箱
-    email = models.CharField(max_length=255)
-    #个人网站
-    url = models.URLField(blank=True)
+    user = models.OneToOneField('users.User')
     #评论内容
     text = models.TextField()
     #评论时间

@@ -1,7 +1,8 @@
 from django.db import models
-from django.contrib.auth.admin import User
+#from django.contrib.auth.admin import User
 from django.urls import reverse
 import markdown
+from users.models import User
 from django.utils.html import strip_tags
 
 # Create your models here.
